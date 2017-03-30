@@ -58,12 +58,12 @@ const Board = ({ isXTurn, changeTurns, numTurns }) => {
   };
 
   const checkVictory = (marker) => {
-    if (numTurns >= 3) {
+    if (numTurns === 8) {
+      console.log('It\'s a tie!');
+    } else if (numTurns >= 3) {
       checkVertical(marker);
       checkHorizontal(marker);
       checkDiagonal(marker);
-    } else if (numTurns === 9) {
-      console.log('It\'s a tie!');
     }
   };
 
